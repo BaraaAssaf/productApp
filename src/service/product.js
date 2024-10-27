@@ -4,7 +4,7 @@ const createProduct = async (data) => await prisma.product.create({ data });
 const getAllProducts = async (filters, sortOrder) => {
     return await prisma.product.findMany({
         where: filters,
-        orderBy: sortOrder || undefined, // Use sortOrder if provided
+        orderBy: sortOrder || undefined,
     });
 };
 const updateProduct = async (id, data) => await prisma.product.update({ where: { id }, data });

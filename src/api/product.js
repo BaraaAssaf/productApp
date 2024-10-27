@@ -17,6 +17,7 @@ router.get('/', async (req, res) => {
         const filters = {
             category: req.query.category || undefined,
             available: req.query.available === 'true' || undefined,
+            id: +req.query.id || undefined
         };
         let sortOrder;
         if (req.query.price === 'lowest') {
